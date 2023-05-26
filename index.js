@@ -26,3 +26,11 @@ mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnified
   .catch((error) => console.log(`${error} did not connect`));
 
 mongoose.set('useFindAndModify', false);
+
+app.listen(PORT, function(err){
+    if (err){
+        console.log(`Error in running the server: ${err}`);
+    }
+
+    console.log(`Server is running on port: ${PORT}`);
+});
