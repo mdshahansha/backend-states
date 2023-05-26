@@ -22,15 +22,9 @@ app.use('/user',userRoutes);
 const PORT = process.env.PORT|| 8000;
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(PORT, () => console.log(`Server Running on ${PORT}`)))
+  .then(() => app.listen(PORT, () => console.log(`Server Running on***** ${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
 mongoose.set('useFindAndModify', false);
 
-app.listen(PORT, function(err){
-    if (err){
-        console.log(`Error in running the server: ${err}`);
-    }
-
-    console.log(`Server is running on port: ${PORT}`);
-});
+ 
